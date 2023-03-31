@@ -1,0 +1,22 @@
+
+
+    
+<div class="form-group">
+    <label for="status">Confirm Booking?</label>
+    <select  class="form-select" aria-label="CHOOSE" id="status" [(ngModel)]="hospital.status" name="status">
+    <option value="Overbooked">YES</option>
+    <option value="{{hospital.status}}">NO</option>
+
+    </select>
+        <div>
+            <button (click)="onSubmit()" class="btn btn-primary">Submit</button><br>
+            </div>
+        
+      
+    </div>
+    
+
+
+    
+
+

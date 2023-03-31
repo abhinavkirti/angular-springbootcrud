@@ -1,0 +1,87 @@
+<h3>Find A Slot</h3>
+<div [hidden]="submitted" style="width: 400px;" class="bg">
+    <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Patient Name</label>
+        <input type="text"  class="form-control" id="name" required [(ngModel)]="hospital.name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="appointmentdate">Appointment Date</label>
+        <input type="date" min="2022-08-12" class="form-control" id="appointmentdate" required [(ngModel)]="hospital.appointmentdate" name="appointmentdate">
+      </div>
+
+         <div>
+        <label for="status">Slots:</label>
+        <select  class="form-select" aria-label="CHOOSE" id="slot" [(ngModel)]="hospital.slot" name="slot">
+       <option value="9:00 AM TO 9:30AM">Evening</option>
+        <option value="12:00 AM TO 1:30pm">Morning</option>
+        </select>
+         </div>
+        <div >
+          <fieldset>
+            <legend>Speciality:</legend>
+          <input type="radio" id="speciality" name="speciality" value="Dentist" [(ngModel)]="hospital.speciality">
+            <label for="html">Dentist</label><br>
+            <input type="radio" id="speciality" name="speciality" value="Nueralogist" [(ngModel)]="hospital.speciality">
+            <label for="html">Nueralogist</label><br>
+            <input type="radio" id="speciality" name="speciality" value="Gynecologist" [(ngModel)]="hospital.speciality">
+            <label for="html">Gynecologist</label><br>
+            <input type="radio" id="speciality" name="speciality" value="Physician" [(ngModel)]="hospital.speciality">
+            <label for="html">Physician</label><br>
+            <input type="radio" id="speciality" name="speciality" value="Peditrician" [(ngModel)]="hospital.speciality">
+            <label for="html">Peditrician</label><br>
+          </fieldset>
+        </div>
+
+         <!-- <div>
+        <label for="speciality">Speciality:</label>
+        <select  class="form-select" aria-label="CHOOSE" id="slot" [(ngModel)]="hospital.speciality" name="speciality">
+       <option value="Dentist">Dentist</option>
+        <option value="Nueralogist">Nueralogist</option>
+        <option value="Gynecologist">Gynecologist</option>
+        <option value="Physician">Physician</option>
+        <option value="Peditrician">Peditrician</option>
+        </select>
+         </div> -->
+    <!-- <div>
+      <fieldset>
+        <legend>Cunsultants:</legend>
+        <select name="consultant" id="consultant" multiple [(ngModel)]="hospital.consultant">
+          <option value="DR.ABHINAV">DR.ABHINAV</option>
+          <option value="DR.YASH">DR.YASH</option>
+          <option value="DR.JAYDEEP">DR.JAYDEEP</option>
+          <option value="DR.YASHRAJ">DR.YASHRAJ</option>
+        </select>
+      </fieldset>
+    </div> -->
+
+       <div class="spec">
+        <fieldset>
+          <legend>Cunsultants:</legend>
+        <!-- <label for="status">Cunsultants:</label> -->
+        <select  class="form-select" aria-label="CHOOSE" id="consultant" [(ngModel)]="hospital.consultant" name="consultant">
+       <option value="DR.ABHINAV">DR.ABHINAV</option>
+        <option value="DR.YASH">DR.YASH</option>
+        <option value="DR.JAYDEEP">DR.JAYDEEP</option>
+        <option value="DR.YASHRAJ">DR.YASHRAJ</option>
+        </select>
+      </fieldset>
+       </div>
+
+        <button type="submit" class="btn btn-success">Search</button><br>
+        <button  class="btn btn-primary">Cancel</button><br>
+
+    
+    </form>
+</div>
+    
+        
+    
+
+
+
+
+        
+    
+      
+

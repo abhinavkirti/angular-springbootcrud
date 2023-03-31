@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Appointment Booking</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Cunsultant</th>
+            <th>Specialty</th>
+                 <th>Slot</th>
+                 <th>Status</th>
+                 
+                 
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hospital of hospitals | async" >
+            <td><button (click)="display(hospital.id)" class="btn btn-danger">Book</button>
+              
+               
+                
+            </td>
+            <td>{{hospital.consultant }}</td>
+            <td>{{hospital.speciality }}</td>
+             <td>{{hospital.slot}}</td>
+             <td>{{hospital.status}}</td>
+             <td><button (click)="deleteHospital(hospital.id)" class="btn btn-danger">Remove</button></td>
+             
+             
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
